@@ -1,0 +1,65 @@
+--Uc4 Edit contacts
+update AddressBooktable
+SET FirstName='Alfred', LastName='noble'
+WHERE City='Hyderabad';
+
+
+--Uc5 Delete contacts
+delete from AddressBooktable where FirstName='vijay'
+
+
+--Uc6 Retrieve Person belonging to city/state from table
+SELECT *
+  FROM AddressBooktable
+  WHERE City = 'Chennai';
+
+  SELECT *
+  FROM AddressBooktable
+  WHERE State = 'Andhra';
+
+
+--Uc7 Size of table by city&state
+SELECT COUNT(City) as 'CityCount'
+FROM AddressBooktable where City='Chennai'
+
+SELECT COUNT(State)as 'StateCount'
+FROM AddressBooktable where State='Karnataka'
+
+
+select * from AddressBooktable
+
+--Uc8 Sort alphabetically by person's name for given city
+SELECT * FROM AddressBooktable where City='Bangalore'
+ORDER BY FirstName
+ 
+
+--Uc9 Alter table with Type
+ALTER TABLE AddressBooktable
+ADD Type varchar(50);
+
+update AddressBooktable set Type='Family' where FirstName='Sri'
+update AddressBooktable set Type='Friend' where FirstName='Sree'
+update AddressBooktable set Type='Profession' where FirstName='Ravi'
+update AddressBooktable set Type='Friend' where FirstName='Vikram'
+update AddressBooktable set Type='Friend' where FirstName='Riya'
+update AddressBooktable set Type='Friend' where FirstName='Reethu'
+update AddressBooktable set Type='Profession' where FirstName='Vishal'
+update AddressBooktable set Type='Family' where FirstName='Vijay'
+
+
+--Uc10 No of contact persons count by type
+SELECT COUNT(*) FirstName
+FROM AddressBooktable where Type='Family';
+
+
+--Uc11 Add person to both friend and family
+ALTER TABLE AddressBooktable
+ADD Other_Type varchar(50);
+
+update AddressBooktable set Other_Type='Family' where FirstName='Sree'
+update AddressBooktable set Other_Type='Friend' where FirstName='Ravi'
+update AddressBooktable set Other_Type='Friend' where FirstName='Vijay'
+
+
+
+
