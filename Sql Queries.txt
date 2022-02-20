@@ -1,0 +1,28 @@
+--Uc1 CreateDB
+Create database addressbookservicedb  
+
+--Uc2 Create table
+create table AddressBooktable
+(
+FirstName varchar(50),
+LastName varchar(50),
+Address Varchar(250),
+City varchar(250),
+State varchar(30),
+Zip varchar(6),
+PhoneNumber varchar(10),
+Email varchar(50)
+)
+
+
+
+--Uc3 Insert contacts 
+select * from AddressBooktable
+insert into AddressBooktable values('Sri','varshini','332abc','Bangalore','Karnataka','299973','9665243989','avf@gmail.com')
+insert into AddressBooktable values('Sree','priya','8332ytsc','Chennai','Tamilnadu','600073','9668363500','acxstt@gmail.com')
+insert into AddressBooktable values('Ravi','varma','03892abc','Hyderabad','Andhra','833373','8663329365','irjdb@gmail.com')
+insert into AddressBooktable values('Vikram','Chauhan','982abc','Chennai','Tamilnadu','600973','7937253727','cdd@gmail.com')
+insert into AddressBooktable values('Riya','sen','3342abc','Bangalore','Karnataka','299973','9665243989','avf@gmail.com')
+insert into AddressBooktable values('Reethu','singh','668332ytsc','Cochin','Kerala','600173','9600300500','ac556xstt@gmail.com')
+insert into AddressBooktable values('Vishal','varma','031892abc','Patna','Bihar','830373','7663329365','irjd67b@gmail.com')
+insert into AddressBooktable values('Vijay','vikas','98552abc','Chennai','Tamilnadu','605973','7908253727','cdd756@gmail.com')
